@@ -15,6 +15,227 @@
 */
 
 .page {
+  /* font-family: var(--primary-font); */
+  /* font-variation-settings: 'wght' var(--base-text-weight-light); */
+  font-family: var(--primary-font);
   min-inline-size: 320px;
-  min-block-size: 100dvb;
+  min-block-size: 100dvb; /*стоковое значение*/
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  color: var(--color-text);
+  background-color: var(--background-color, #fff);
+  /* color: var(--accent-color, #000); */
+  color: var(--color-text);
+  background-image: var(--background-gradient-image);
+  font-size: var(--font-size) ;
+}
+
+.header__title {
+  font-size: 65px;
+  font-family: var(--accent-font);
+  /* margin-block-end: 20px; */
+
+}
+
+.header__sub-title {
+  font-size: 23px;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  /* margin-block-end: 25px; */
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 14px;
+}
+
+.header__theme-menu {
+  display: grid;
+  align-self: start;
+  justify-content: center;
+  /* gap: 14px; */
+
+}
+
+.theme-menu__button {
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--color-text);
+  font-family: var(--accent-font);
+  background-color: transparent;
+  
+}
+
+.theme-menu__item {
+  position: relative;
+}
+
+.header {
+  /* padding: 0 120px ; */
+  /* max-height: 700px; */
+  background-color: #fff;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: min-content min-content min-content;
+  margin-block-start: 102px;
+  border: 2px solid var(--color-text);
+  padding: 136px 120px 13px 120px;
+  margin: 0 auto;
+  margin-block: 100px;
+  /* margin-block-end: 100px; */
+}
+
+.img_card {
+  max-width: 696px;
+  min-width: 696px;
+  object-fit: cover;
+  background-size: cover; 
+  background-position: center top;
+  border: 2px solid var(--color-text);
+}
+
+.card-container {
+  /* background-color: #fff; */
+  margin: 0 auto;
+  /* display: flex; */
+}
+
+.card {
+  font-family: var(--primary-font);
+  font-weight: var(--title-font-weight);
+  background-color: #fff;
+  color: #000;
+  border: 2px solid var(--color-text);
+}
+
+.card_title {
+  font-size: var(--font-size);
+  margin: 3px auto 3px 10px;
+}
+
+.cards {
+  display: grid;
+  max-width: 696px;
+  margin: 0 auto;
+  /* border: 2px solid var(--color-text); */
+  margin-block-end: 50px;
+}
+
+.card-texts {
+  padding: 25px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid var(--color-text);
+  display: grid;
+  gap: 25px;
+}
+
+.card-text {
+  margin-block-end: 25px;  
+  font-size: var(--font-size);
+  font-weight: var(--text-font-weight);
+}
+
+.card_buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+}
+
+.card_button {
+  background-color: transparent;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  padding: 12px 37px;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.card_button::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-text); 
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.card_button:hover::before {
+  transform: translateX(100%);
+}
+
+.card_button:hover .button__text {
+  color: #fff; 
+}
+
+
+.card_heart-button{
+  background-color: transparent;
+  border: none;
+}
+
+
+.footer {
+  /* background-color: #fff; */
+  margin-block-end: 102px;
+  display: flex;
+  justify-content: center;
+}
+
+.button_footer {
+  cursor: pointer;
+  border: 2px solid var(--color-text);
+  background: #fff;
+  color: var(--color-text);
+  font-size: 14px;
+  font-family: var(--accent-font);
+  font-weight: var(--text-font-weight);
+  padding: 16px 18px;
+}
+
+.icon {
+  color: var(--color-text);
+}
+
+.modal-toggle {
+  display: none;
+}
+
+.modal-toggle:checked + #modal {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  z-index: 1001;
+  display: none;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
