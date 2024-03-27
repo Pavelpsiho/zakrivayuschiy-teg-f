@@ -32,10 +32,15 @@ a {
 
 button,
 input {
-  color: currentColor;
+  /* color: currentColor; */
   font-family: inherit;
   font-size: inherit;
+
 }
+  /* 
+  button:focus {
+    outline: none;
+  } */
 
 ul,
 ol {
@@ -54,4 +59,8 @@ ol {
 
 button {
   cursor: pointer;
+}
+
+img {
+  border: none; 
 }
