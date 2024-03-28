@@ -8,13 +8,15 @@
 :root.theme-dark {
     --accent-color: #00CC14;
     --accent-color-bg: #000;
-    --color-text: #00CC14;   
+    --color-text: #00CC14;
     --background-color: var(--accent-color-bg);
     --title-font-weight: 785;
     --text-font-weight: 465;
+    --hover_text: #00CC14;
+    --section-width: 100vh;
     --background-gradient-image: repeating-linear-gradient(180deg, #000000 0px, #000000 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
-                  repeating-linear-gradient(90deg, #000000 0px, #000000 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
-                  linear-gradient(180deg, #007F0C 0.01%, #004306);
+        repeating-linear-gradient(90deg, #000000 0px, #000000 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
+        linear-gradient(180deg, #007F0C 0.01%, #004306);
 }
 
 
@@ -26,54 +28,58 @@
     --accent-color-transparent: rgb(0 0 0 / 0.6);
     --button-text-color: #fff;
     --color-text-button: #fff;
-    --color-heart:#ff0000;
-    --color-none-heart:rgba(256, 0, 0, 0);
+    --color-heart: #ff0000;
+    --color-none-heart: rgba(256, 0, 0, 0);
     --font-size: 18px;
     --background-pattern: none;
     --title-font-weight: 700;
     --text-font-weight: 400;
     --background-color: var(--accent-color-bg);
     --color-text: #000;
+    --hover_text: #fff;
+    --section-width: 100vh;
     --text-outline-color: var(--background-color);
-    --background-gradient-image: repeating-linear-gradient( #d3d3d3 0px 2px, rgb(211 211 211/0) 2px 4px), 
-    repeating-linear-gradient(90deg, #d3d3d3 0px 2px, rgb(211 211 211/0) 2px 4px),
-    linear-gradient(#E7E7E7 0.01%, #1A1A1A);
+    --background-gradient-image: repeating-linear-gradient(#d3d3d3 0px 2px, rgb(211 211 211/0) 2px 4px),
+        repeating-linear-gradient(90deg, #d3d3d3 0px 2px, rgb(211 211 211/0) 2px 4px),
+        linear-gradient(#E7E7E7 0.01%, #1A1A1A);
 }
 
- @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
-    --accent-color: linear-gradient(180deg, #007F0C 0%, #004306 100%);
-    --accent-color-bg: #000;
-    --color-text: #00CC14;   
-    --background-color: var(--accent-color-bg);
-    --title-font-weight: 785;
-    --text-font-weight: 465;
-    --background-gradient-image: repeating-linear-gradient(180deg, #000000 0px, #000000 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
-                  repeating-linear-gradient(90deg, #000000 0px, #000000 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
-                  linear-gradient(180deg, #007F0C 0.01%, #004306);
+        --accent-color: linear-gradient(180deg, #007F0C 0%, #004306 100%);
+        --accent-color-bg: #000;
+        --color-text: #00CC14;
+        --background-color: var(--accent-color-bg);
+        --title-font-weight: 785;
+        --text-font-weight: 465;
+        --background-gradient-image: repeating-linear-gradient(180deg, #000000 0px, #000000 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
+            repeating-linear-gradient(90deg, #000000 0px, #000000 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
+            linear-gradient(180deg, #007F0C 0.01%, #004306);
     }
 }
 
 
 @media (prefers-color-scheme: light) {
     :root {
-    --background-color: var(--accent-color);
-    --accent-color: #000;
-    --accent-color-bg: #fff;
-    --accent-color-transparent: rgb(0 0 0 / 0.6);
-    --button-text-color: #fff;
-    --color-text-button: #fff;
-    --color-heart:#ff0000;
-    --color-none-heart:rgba(256, 0, 0, 0);
-    --font-size: 18px;
-    --background-pattern: none;
-    --title-font-weight: 700;
-    --text-font-weight: 400;
-    --background-color: var(--accent-color-bg);
-    --color-text: #000;
-    --text-outline-color: var(--background-color);
-    --background-gradient-image: repeating-linear-gradient( #d3d3d3 0px 2px, rgb(211 211 211/0) 2px 4px), 
-    repeating-linear-gradient(90deg, #d3d3d3 0px 2px, rgb(211 211 211/0) 2px 4px),
-    linear-gradient(#E7E7E7 0.01%, #1A1A1A);
+        --background-color: var(--accent-color);
+        --accent-color: #000;
+        --accent-color-bg: #fff;
+        --accent-color-transparent: rgb(0 0 0 / 0.6);
+        --button-text-color: #fff;
+        --color-text-button: #fff;
+        --color-heart: #ff0000;
+        --color-none-heart: rgba(256, 0, 0, 0);
+        --font-size: 18px;
+        --background-pattern: none;
+        --title-font-weight: 700;
+        --text-font-weight: 400;
+        --background-color: var(--accent-color-bg);
+        --color-text: #000;
+        --hover_text: #fff;
+        --section-width: 100vh;
+        --text-outline-color: var(--background-color);
+        --background-gradient-image: repeating-linear-gradient(#d3d3d3 0px 2px, rgb(211 211 211/0) 2px 4px),
+            repeating-linear-gradient(90deg, #d3d3d3 0px 2px, rgb(211 211 211/0) 2px 4px),
+            linear-gradient(#E7E7E7 0.01%, #1A1A1A);
     }
 }

@@ -13,108 +13,112 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-  .theme-menu__button[disabled="true"]::before {
-    content: '▶';
-    position: absolute;
-    right: 95px;
-    top: 2px;
-    transform: translateY(-50%);
-    color: currentColor;
-    animation: arrowAnimation 0.5s ease-in-out infinite alternate;
-  } 
-  
-  @keyframes arrowAnimation {
-    0% {
-      transform: translateX(0); 
-    }
-    100% {
-      transform: translateX(4px); 
-    }
+.theme-menu__button[disabled="true"]::before {
+  content: '▶';
+  position: absolute;
+  right: 95px;
+  top: 2px;
+  transform: translateY(-50%);
+  color: currentColor;
+  animation: arrowAnimation 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateX(0);
   }
+
+  100% {
+    transform: translateX(4px);
+  }
+}
 
 
 
 
-  .like-icon .core {
-    fill: transparent;
-    transition: fill 0.3s 0.03s linear;
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
+}
+
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.5s 0.03s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--color-text);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--color-text);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked:active .main-body {
+  fill: var(--color-heart);
+  transition: fill 0.3 0.06s linear;
+}
+
+
+.like-icon:active .core {
+  fill: var(--color-heart);
+}
+
+.like-icon:active .main-body {
+  fill: var(--color-heart);
+  transition: fill 0.5s 0.03s linear;
+}
+
+.like-icon.is-liked .countour {
+  fill: var(--color-heart);
+  transition: fill 0.3 0.06s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--color-heart);
+  transition: fill 0.3 0.06s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color-heart);
+  transition: fill 0.3 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heart 0.3s 0.1s reverse ease-in;
+}
+
+.like-icon.is-liked .sparks {
+  transform-origin: center;
+  fill: var(--color-heart);
+  animation: heart 0.3s 0.1s reverse ease-in, resetFill 0s 0.4s forwards;
+}
+
+.like-icon.is-liked.heart:active .main-body {
+  fill: var(--color-heart);
+}
+
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
   }
-  
-  
-  .like-icon .core {
-    fill: transparent;
-    transition: fill 0.3s 0.03s linear;
+
+  50% {
+    transform: scale(1.5);
   }
-  
-  .like-icon:hover .main-body {
-    fill: var(--color-text);
-    transition: fill 0.5s 0.03s linear;
+
+  100% {
+    transform: scale(1);
   }
-  
-  .like-icon:hover .core {
-    fill: var(--color-text);
-    transition: fill 0.3s 0.03s linear;
+}
+
+@keyframes resetFill {
+  to {
+    fill: none;
   }
-  
-  .like-icon.is-liked:active .main-body {
-    fill: var(--color-heart);
-    transition: fill 0.3 0.06s linear;
-  }
-  
-  
-  .like-icon:active .core {
-    fill: var(--color-heart);
-  }
-  
-  .like-icon:active .main-body {
-    fill: var(--color-heart);
-    transition: fill 0.5s 0.03s linear;
-  }
-  
-  .like-icon.is-liked .countour {
-    fill: var(--color-heart);
-    transition: fill 0.3 0.06s linear;
-  }
-  .like-icon.is-liked .core {
-    fill: var(--color-heart);
-    transition: fill 0.3 0.06s linear;
-  }
-  
-  .like-icon.is-liked .main-body {
-    fill: var(--color-heart);
-    transition: fill 0.3 0.06s;
-  }
-  
-  .like-icon.is-liked .heart {
-    transform-origin: center;
-    animation: heart 0.3s 0.1s reverse ease-in;
-  }
-  
-  .like-icon.is-liked .sparks {
-    transform-origin: center;
-    fill: var(--color-heart);
-    animation: heart 0.3s 0.1s reverse ease-in, resetFill 0s 0.4s forwards;
-  } 
-  .like-icon.is-liked.heart:active .main-body {
-    fill: var(--color-heart);
-  }
-  
-  
-  @keyframes heart {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-  }
-  
-  @keyframes resetFill {
-    to {
-      fill: none;
-    }
-  }
-  
+}
