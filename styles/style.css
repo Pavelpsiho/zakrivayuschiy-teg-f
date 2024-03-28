@@ -24,11 +24,11 @@
   display: grid;
   justify-content: center;
   color: var(--color-text);
-  background-color: var(--background-color, #fff);
   color: var(--color-text);
   background-image: var(--background-gradient-image);
   font-size: var(--font-size);
-  /* padding: 100px 0; */
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 .section_width {
@@ -52,14 +52,14 @@
 }
 
 .header__title {
-  font-size: 65px;
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   font-family: var(--accent-font);
   margin: clamp(7.5rem, 6.1479rem + 1.5023vw, 8.5rem) auto 10px;
 
 }
 
 .header__sub-title {
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   font-family: var(--accent-font);
   text-transform: uppercase;
   display: flex;
@@ -125,8 +125,21 @@
   text-decoration: none;
 }
 
+.theme-menu__button::after:focus-visible {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+  transition: opacity 0.3 ease;
+}
+
+
 .theme-menu__button:focus-visible {
   outline: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 
@@ -166,7 +179,7 @@
   display: grid;
   max-width: 696px;
   margin: 0 auto;
-  margin-block-end: 52px;
+  margin-block-end: 50px;
   background: var(--accent-color-bg);
 }
 
@@ -278,11 +291,11 @@
   width: 39px;
   height: 36px;
   outline: none;
+  transition: var(--transition);
 }
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
-  transition: 0.3s ease;
 }
 
 
@@ -304,6 +317,12 @@
   padding: 16px 17px;
 }
 
+.dialog_button {
+  display: flex;
+  justify-content: center;
+  margin-block-end: 103px;
+}
+
 .dialog {
   margin: 0;
   padding: 0;
@@ -311,7 +330,8 @@
   top: 50%;
   left: 50%;
   width: 357px;
-  height: 198px;
+  height: auto;
+  max-height: 198px;
   transform: translate(-50%, -50%);
   background-color: var(--accent-color-bg);
   color: var(--color-text);
@@ -325,55 +345,6 @@
 
 .dialog::backdrop {
   background-color: rgb(255, 0, 0);
-}
-
-
-.dialog__button {
-  width: 100%;
-  font-family: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  block-size: 38px;
-  border: 2px solid var(--accent-color);
-  cursor: pointer;
-  position: relative;
-  background-color: transparent;
-  overflow: hidden;
-}
-
-.dialog_button__text {
-  display: block;
-  margin: auto;
-  color: var(--accent-color);
-}
-
-.dialog_button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
-  transition: box-shadow 0.3s ease;
-}
-
-.dialog_button::after {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 0;
-  left: -100%;
-  transition: left 0.5s ease-in-out;
-  inline-size: 100%;
-  block-size: 100%;
-  background-color: var(--accent-color);
-}
-
-.dialog_button:hover::after {
-  left: 100%;
-}
-
-.dialog_button:hover .dialog_button__text {
-  position: relative;
-  color: var(--accent-color);
-  mix-blend-mode: difference;
-  z-index: 15;
 }
 
 .dialog_form {
@@ -398,7 +369,7 @@
 }
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.6);
+  background-color: rgb(0 0 0 / 0.75);
   ;
 }
 
@@ -424,8 +395,8 @@
 
 
 .dialog__text {
-  max-width: 234px;
-  max-height: 63px;
+  /* max-width: 234px;
+  max-height: 63px; */
   line-height: 21px;
   text-transform: uppercase;
 }
