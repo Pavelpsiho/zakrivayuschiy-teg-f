@@ -25,7 +25,7 @@
   justify-content: center;
   color: var(--color-text);
   color: var(--color-text);
-  font-variation-settings: 'wght' var(--main-font-weight);
+  /* font-variation-settings: 'wght' var(--main-font-weight); */
   background-image: var(--background-gradient-image);
   font-size: var(--font-size);
   background-repeat: repeat;
@@ -176,6 +176,8 @@
 }
 
 .card-texts {
+  line-height: 21px;
+  font-size: var(--font-size);
   padding: 25px;
   color: var(--color-text);
   display: grid;
@@ -187,6 +189,7 @@
   position: relative;
   outline: 2px solid var(--color-text);
 }
+
 
 
 .label {
@@ -207,13 +210,6 @@
     0 -1px var(--background-color);
 }
 
-
-.card-text {
-  margin-block-end: 25px;
-  line-height: 21px;
-  font-size: var(--font-size);
-  font-weight: var(--text-font-weight);
-}
 
 .card_buttons {
   display: flex;
@@ -412,11 +408,11 @@
   .section_width {
     width: 371px;
   }
-
+/* 
   .card-texts {
     padding: 28px 25px 21px 25px;
     gap: 26px;
-  }
+  } */
 
   .img_card {
     max-width: 100%;
