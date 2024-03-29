@@ -12,6 +12,8 @@
     --background-color: var(--accent-color-bg);
     --title-font-weight: 785;
     --text-font-weight: 465;
+    --main-font-weight-light: 465;
+    --main-font-weight-bold: 785;
     --hover_text: #00CC14;
     --section-width: 100vh;
     --background-gradient-image: repeating-linear-gradient(180deg, #000000 0px, #000000 2px, rgba(211, 211, 211, 0) 2px, rgba(211, 211, 211, 0) 4px),
@@ -34,6 +36,8 @@
     --background-pattern: none;
     --title-font-weight: 700;
     --text-font-weight: 400;
+    --main-font-weight-light: 400;
+    --main-font-weight-bold: 700;
     --background-color: var(--accent-color-bg);
     --color-text: #000;
     --hover_text: #fff;
